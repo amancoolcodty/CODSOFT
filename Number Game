@@ -1,0 +1,45 @@
+ import java.util.InputMismatchException;
+ import java.util.Random;
+ import java.util.Scanner;
+
+public class Number GuessingGame (
+public static void main(String[] args) {
+Random random
+new Random();
+int randomNumber random.nextInt(100) 1; // Generate random number between 1 and 100
+Scanner scanner = new Scanner(System.in);
+
+int user Guess = 0;
+
+int numberOfAttempts = 0;
+
+int maxAttempts = 10;
+
+System.out.println("Welcome to the Number Guessing Game!");
+System.out.println("I have generated a number between 1 and 100. Can you guess what it is?"); System.out.println("You have a maximum of maxAttempts" attempts to guess the number."
+);
+while (userGuess = randomNumber && numberOfAttempts < maxAttempts) { System.out.print("Enter your guess: ");
+try {
+userGuess = scanner.nextInt();
+numberOfAttempts++;
+if (userGuess randomNumber) {
+System.out.println("Too high! Try again.");
+} else if (userGuess randomNumber) (
+System.out.println("Too low! Try again.");
+} else {
+System.out.println("Congratulations! You guessed the correct number: "
+randomNumber);
+
+System.out.println("You guessed it in numberOfAttempts.
+attempts.");
+}
+} catch (InputMismatchException e) {
+System.out.println("Invalid input! Please enter a valid integer.");
+scanner.next();
+}}
+if(userguess!= randomnumber){
+System.out.println("Sorry you used all"+"attempts.The correct answer was" +randomNumber);
+}
+Scanner.close();
+}
+}
